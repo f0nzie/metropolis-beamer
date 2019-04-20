@@ -8,7 +8,7 @@ output:
   beamer_presentation:
     citation_package: natbib
     includes:
-      in_header: header.tex
+      in_header: headerOG.tex
 bibliography: demo.bib
 biblio-style: abbrvnat
 ---
