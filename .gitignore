@@ -1,0 +1,17 @@
+\.Rproj\.user/
+\.Rhistory
+.Rproj.user
+
+*_cache/
+*_files/
+
+
+
+*.log
+*.gz
+*.nav
+*\.nb\.html
+*.snm
+
+
+*-concordance\.tex
