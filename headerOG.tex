@@ -22,6 +22,7 @@
 %%% TeX-master: t
 %%% End:
 
+
 % background color for title of the slides
 \definecolor{OilGainsGreen}{RGB}{85, 130, 5}    % Fidelity green normal
 \setbeamercolor{frametitle}{bg=OilGainsGreen, fg=white}
@@ -55,7 +56,6 @@
 %     \put(300,10){\makebox(0,0)[rt]{\includegraphics[width=12cm]{OilGainsTitleSlide2}}}
 %   \end{picture}}
 
-
 % remove the [rt] keyword. Offset and increase to maximum size
 % https://tex.stackexchange.com/a/412707/173708
 \titlegraphic{%
@@ -70,3 +70,11 @@
 
 % % this works as a transparent background but overlaps text
 % \setbeamertemplate{title page}{\tikz[remember picture,overlay]\node[opacity=0.3] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{OilGainsTitleSlide2}};}
+
+% change color of title and subtitle
+\definecolor{OilGainsGreen}{RGB}{85, 130, 5}  % Fidelity green normal
+\setbeamercolor{title}{fg=white,bg=OilGainsGreen}
+\setbeamercolor{subtitle}{fg=yellow,bg=OilGainsGreen}
+\setbeamercolor{author}{fg=white,bg=OilGainsGreen}
+\setbeamercolor{date}{fg=white,bg=OilGainsGreen}
+\setbeamercolor{institute}{fg=yellow,bg=OilGainsGreen}
