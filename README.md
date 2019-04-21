@@ -4,9 +4,12 @@ An inplementation with Rmarkdown of the metropolis theme located here:
 
 https://github.com/matze/mtheme
 
+This is a customized version of `mwtropolis` to be used in my presentations.
+
+
 ## Changes
 
-1. Created a Rmarkdown presentation identical to the sample
+1. Created a `Rmarkdown` presentation identical to the sample in Latex
 2. Created another Rmarkdown presentation from another template used in the package `binb`.
 3. Add a Rmarkdown presentation using a table of contents.
 3. Modify the `header.tex` to number the sections in the TOC
