@@ -5,8 +5,9 @@ subtitle: A modern beamer theme
 institute: Oil Gains Analytics LLC
 date: \today
 output: 
-  beamer_presentation:
+  beamer_presentation: 
     citation_package: natbib
+    highlight: kate
     includes:
       in_header: headerOG.tex
 bibliography: demo.bib
