@@ -17,3 +17,14 @@ This is a customized version of `metropolis` Beamer them to be used in my presen
 5. Add a folder `demo` with the original **metropolis** demo in Latex.
 6. Compile and copy the **metropolis** styles. Compilation done in Linux Mint 19.
 
+
+## Folders
+
+### `demo`
+Contains the original demo `tex` file from the `metropolis` theme.
+
+### `latex_test`
+Diverse `Rnw` files to test implementations before translating to Rmarkdown.
+
+### `figs`
+All pciture files go here.
