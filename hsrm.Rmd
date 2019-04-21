@@ -1,0 +1,158 @@
+---
+author: Alfonso R. Reyes
+title: Modified Metropolis
+subtitle: With Table of Contents
+institute: Oil Gains Analytics LLC
+date: \today
+output: 
+  beamer_presentation: 
+    citation_package: natbib
+    highlight: kate
+    includes:
+      in_header: headerOG.tex
+bibliography: demo.bib
+biblio-style: abbrvnat
+---
+
+
+# illustrations
+## photo with copyright
+\begin{figure}
+    \centering
+	\includegraphics[width=\linewidth]{photo.jpg}
+\end{figure}
+
+
+
+# Tables
+
+## Theme options
+To customize the appearance of the presentation, the following options can be selected.
+\begin{table}[]
+	\begin{tabularx}{\linewidth}{l>{\raggedright}X}
+		\toprule
+		\textbf{Option}			& \textbf{impact} \tabularnewline
+		\midrule
+		\texttt{noflama}		& If you do not have the font Flama you can use this option to switch to the font Arial. \tabularnewline
+		\texttt{noserifmath}		& formulas are also set sans serif. \tabularnewline
+		\texttt{nosectionpages} & The section initiation pages are hidden.\tabularnewline
+		\bottomrule
+	\end{tabularx}
+	\label{tab:options}
+\end{table}
+
+
+## Table
+\begin{table}[]
+	\caption{Selection of window function and their properties}
+	\begin{tabular}[]{lrrr}
+		\toprule
+		\textbf{Window}			& \multicolumn{1}{c}{\textbf{First side lobe}}	
+		                    & \multicolumn{1}{c}{\textbf{3\,dB bandwidth}}
+		                    & \multicolumn{1}{c}{\textbf{Roll-off}} \\
+		\midrule
+		Rectangular				& 13.2\,dB	& 0.886\,Hz/bin	& 6\,dB/oct		\\[0.25em]
+		Triangular				& 26.4\,dB	& 1.276\,Hz/bin	& 12\,dB/oct	\\[0.25em]
+		Hann					& 31.0\,dB	& 1.442\,Hz/bin	& 18\,dB/oct	\\[0.25em]
+		Hamming					& 41.0\,dB	& 1.300\,Hz/bin	& 6\,dB/oct		\\
+		\bottomrule
+	\end{tabular}
+	\label{tab:WindowFunctions}
+\end{table}
+
+
+
+
+
+# Formulas
+## Formulas
+\begin{block}{Fourier Integral}
+\begin{equation*}
+F(\textrm{j}\omega) = \int\limits_{-\infty}^{\infty} f(t)\cdot\textrm{e}^{-\textrm{j}\omega t} dt
+\end{equation*}
+\end{block}
+\begin{block}{Fakultät}
+\begin{equation*}
+	n! = 1\cdot 2 \cdot 3 \cdot\ldots\cdot n = \prod_{k=1}^n k
+\end{equation*}
+\end{block}
+
+
+## Mindmap mit TikZ
+\centering
+\begin{tikzpicture}[scale=0.88]
+	%\tikzset{every child/.append style={level distance=250}}
+	\path[mindmap,concept color=gray,text=black]
+	node[concept] {One}
+	[clockwise from=-30]
+	child[concept color=blue,text=white] { node[concept] {\textcolor{white}{Two}} }
+	child[concept color=green,text=white] { node[concept] {Three} }
+	child[concept color=purple,text=white] { node[concept] {Four} };
+\end{tikzpicture}
+
+
+
+
+
+# Footnotes
+## Footnotes
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem \footnote{Lorem ipsum dolor sit amet} ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+
+# Notes
+## slide with accompanying note sheet
+For the audience, this slide.
+
+The following programs are available for your presentation:
+\begin{itemize}
+	\item Splitshow (Mac OS X)\\\url{https://code.google.com/p/splitshow/}
+	\item pdf-presenter (Windows)\\\url{https://code.google.com/p/pdf-presenter/}
+\end{itemize}
+
+\note{
+For your notes on the lecture use this slide.
+
+The following programs are available for your presentation:
+\begin{itemize}
+	\item Splitshow (Mac OS X)\\\url{https://code.google.com/p/splitshow/}
+	\item pdf-presenter (Windows)\\\url{https://code.google.com/p/pdf-presenter/}
+\end{itemize} 
+}
+
+
+# Columns
+## Two columns
+\begin{multicols}{2}
+		Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\begin{itemize}
+    \item ein Eintrag
+    \item noch ein Eintrag
+\end{itemize}
+\end{multicols}
+
+
+## COlumn break
+\begin{multicols}{2}
+	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\columnbreak
+\begin{itemize}
+	\item ein Eintrag
+	\item noch ein Eintrag
+\end{itemize}
+\end{multicols}
+
+
+
+# Outlook
+## Known bugs
+\begin{itemize}
+	\item Theme `hsrm` is currently in a single sty file. This should be divided into individual files for font, color etc.
+\end{itemize}
+
+## Fragen, Anmerkungen, Kontakt
+The HSRM Theme is under the \quoted{GNU Public License}. It may therefore be passed on and modified if the license type is retained.
+	
+For questions and comments I am at your disposal.
+\begin{itemize}
+	\item \url{Benjamin.Weiss@student.hs-rm.de}
+\end{itemize}
