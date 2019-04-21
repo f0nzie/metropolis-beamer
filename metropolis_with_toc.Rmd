@@ -1,8 +1,8 @@
 ---
-author: Matthias Vogelgesang
+author: Alfonso R. Reyes
 title: Metropolis
 subtitle: A modern beamer theme
-institute: Center for modern beamer themes
+institute: Oil Gains Analytics LLC
 date: \today
 output: 
   beamer_presentation:
@@ -11,6 +11,9 @@ output:
       in_header: headerOG.tex
 bibliography: demo.bib
 biblio-style: abbrvnat
+# urlcolor: blue  
+# linkcolor: red  
+# citecolor: orange  
 ---
 
 ## Table of Contents
