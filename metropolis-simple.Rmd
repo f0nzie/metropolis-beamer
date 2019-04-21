@@ -7,7 +7,7 @@ institute: Centre for Modern Beamer Themes
 output: 
   beamer_presentation:
     includes:
-        in_header: header.tex
+        in_header: headerOG.tex
 fontsize: 12pt
 ---
 
