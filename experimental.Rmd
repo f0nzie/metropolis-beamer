@@ -1,0 +1,68 @@
+---
+author: Alfonso R. Reyes
+title: Metropolis
+subtitle: A modern beamer theme
+institute: Oil Gains Analytics LLC
+date: \today
+output: 
+  beamer_presentation: 
+    citation_package: natbib
+    highlight: kate
+    includes:
+      in_header: headerOG.tex
+bibliography: demo.bib
+biblio-style: abbrvnat
+# urlcolor: blue  
+# linkcolor: red  
+# citecolor: orange  
+---
+
+## Table of Contents
+
+\frametitle{Outline}
+  \begin{minipage}{\textwidth}
+    \tableofcontents
+  \end{minipage}
+
+
+# Well modeling and batch automation
+
+## Why automating well modeling?
+\fontsize{13}{15}\sf
+- Modeling takes a long time
+- It is laborious to calibrate and modify each model
+- It is easy for ten wells
+- But very hard on 25, 50, 100, 200+ wells
+- And when you finish the first batch of well tests ...
+- ... it comes another ...
+- One production optimization cycle could take months  
+
+# Statistical analysis
+## Statistical analysis
+\begin{alertblock}{}
+Statistical Analysis makes a difference
+\end{alertblock}  
+
+\vspace{1.0cm}
+
+\fontsize{13}{15}\sf
+* All wells data get into a tabular format: dataframe
+* Every well is a row (observation) 
+* Well parameters become columns or variables
+* Tables make easier to spot problems with the data
+* Well scanning can be done on a directory or drive
+* Well variables (columns) are selectable
+
+# Network Analysis
+
+## In the network optimizer
+- Retrieve all the solver variables
+- Put the variables in a dataframe
+- Calculate new variables as KPIs
+- Statistically compare the KPIs
+- Arrange the wells by best and worst KPI
+- Run additional scenarios
+
+\vspace{2.0cm}
+<!--    center text   -->
+\begin{center}\textcolor{orange}{KPI: Key Performance Indicators}\end{center}
