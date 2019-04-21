@@ -1,0 +1,54 @@
+\documentclass{beamer}
+
+\usepackage{beamerthemesplit}
+
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[subsections numbered]
+
+\addtobeamertemplate{subsection in toc}{\parshape 1 2em \dimexpr\linewidth-2em\relax}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+\frame{\titlepage}
+
+\begin{frame}[t]
+    \frametitle{Contents:}
+    \begin{minipage}[t][0.5cm]{\textwidth}
+    \tableofcontents
+    \end{minipage}
+\end{frame}
+
+%--------------------------------------------------------
+%------------------/ Section 1 /-------------------------
+\section{Abstract}
+\begin{frame}
+    \frametitle{\textbf{1. Abstract:}}
+    The primary work of my research is 
+\end{frame}
+
+%______________________________________________________
+\subsection{ssssss}
+\begin{frame}
+    \frametitle{\textbf{1.2. ssssssss}}
+    ssssssssssssssssssssssss
+\end{frame}
+
+%______________________________________________________
+\subsection{fffffff}
+\begin{frame}
+    \frametitle{\textbf{1.3. ffffff}}
+    ffffffffffffffffffffffffffffff
+\end{frame}
+
+%--------------------------------------------------------
+%------------------/ Section 2 /-------------------------
+\section{Introduction}
+\begin{frame}
+    \frametitle{\textbf{2. Introduction:}}
+\end{frame}
+
+
+\end{document}
