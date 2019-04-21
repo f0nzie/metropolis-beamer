@@ -76,3 +76,16 @@
 \setlength{\metropolis@progressonsectionpage@linewidth}{2pt}
 \setlength{\metropolis@progressinheadfoot@linewidth}{2pt}
 \makeatother
+
+% \logo{the logo \raisebox{0.5cm}{\includegraphics[width=1cm]{logo}}\hspace*{\textwidth}}
+
+% place the logo at the bottom of each slide
+% https://tex.stackexchange.com/a/341702/173708
+\usepackage{graphbox}
+\setbeamertemplate{footline}{%
+    \includegraphics[align=c, height=0.45cm]{oilgains-alegr}%
+    \hfill%
+    \usebeamercolor[fg]{page number in head/foot}%
+    \usebeamerfont{page number in head/foot}%
+    \insertframenumber\,/\,\inserttotalframenumber\kern1em%
+}
