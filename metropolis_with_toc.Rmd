@@ -1,7 +1,7 @@
 ---
 author: Alfonso R. Reyes
-title: Metropolis
-subtitle: A modern beamer theme
+title: Modified Metropolis
+subtitle: With Table of Contents
 institute: Oil Gains Analytics LLC
 date: \today
 output: 

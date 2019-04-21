@@ -26,34 +26,37 @@
 % make background color for title of the slides green
 % https://tex.stackexchange.com/a/360349/173708
 \definecolor{OilGainsGreen}{RGB}{85, 130, 5}    % Fidelity green normal
-\setbeamercolor{frametitle}{bg=OilGainsGreen}   % do not change foreground color
+\definecolor{OilGainsGreenDark}{RGB}{65, 95, 5}    % Fidelity dark
+\definecolor{OilGainsNight}{RGB}{55, 85, 5}        % Fidelity darker
+\setbeamercolor{frametitle}{bg=OilGainsGreenDark}   % do not change foreground color
+
 
 % set folder for figures
 \graphicspath{{figs/}}
 
 
-% remove the [rt] keyword. Offset and increase to maximum size
-% https://tex.stackexchange.com/a/412707/173708
-\titlegraphic{%
-  \begin{picture}(0,0)
-    \put(154,-114){\makebox(0,0){\includegraphics[width=\paperwidth,height=\paperheight]{OilGainsTitleSlide2}}}
-  \end{picture}}
+% % remove the [rt] keyword. Offset and increase to maximum size
+% % https://tex.stackexchange.com/a/412707/173708
+% \titlegraphic{%
+%   \begin{picture}(0,0)
+%     \put(154,-114){\makebox(0,0){\includegraphics[width=\paperwidth,height=\paperheight]{OilGainsTitleSlide2}}}
+%   \end{picture}}
 
 
-% change color of title and subtitle
+% % change color of title and subtitle
 \definecolor{OilGainsGreen}{RGB}{85, 130, 5}  % Fidelity green normal
-\setbeamercolor{title}{fg=white,bg=OilGainsGreen}
-\setbeamercolor{subtitle}{fg=yellow,bg=OilGainsGreen}
-\setbeamercolor{author}{fg=white,bg=OilGainsGreen}
-\setbeamercolor{date}{fg=white,bg=OilGainsGreen}
-\setbeamercolor{institute}{fg=yellow,bg=OilGainsGreen}
+% \setbeamercolor{title}{fg=white,bg=OilGainsGreen}
+% \setbeamercolor{subtitle}{fg=yellow,bg=OilGainsGreen}
+% \setbeamercolor{author}{fg=white,bg=OilGainsGreen}
+% \setbeamercolor{date}{fg=white,bg=OilGainsGreen}
+% \setbeamercolor{institute}{fg=yellow,bg=OilGainsGreen}
 
-% change color of the progress bar and title separator
-\definecolor{blueucl}{RGB}{0,87,156} %which is the color of my university
-\setbeamercolor{progress bar}{fg=blueucl}
-\setbeamercolor{title separator}{fg=lightgray} % color of the title separator
-\setbeamercolor{progress bar in head/foot}{fg=blueucl}
-\setbeamercolor{progress bar in section page}{fg=OilGainsGreen}
+% % change color of the progress bar and title separator
+% \definecolor{blueucl}{RGB}{0,87,156} %which is the color of my university
+% \setbeamercolor{progress bar}{fg=blueucl}
+% \setbeamercolor{title separator}{fg=lightgray} % color of the title separator
+% \setbeamercolor{progress bar in head/foot}{fg=blueucl}
+% \setbeamercolor{progress bar in section page}{fg=OilGainsGreen}
 
 
 % change color standout slide
@@ -61,7 +64,7 @@
 \definecolor{myGreen}{RGB}{30,98,56}
 \definecolor{myGold}{RGB}{226,168,43}
 % keep colors white and OilGainsGreen
-\setbeamercolor{palette primary}{fg=white, bg=OilGainsGreen}
+\setbeamercolor{palette primary}{fg=white, bg=OilGainsGreenDark}
 
 % change TOC color
 % https://tex.stackexchange.com/a/29332/173708
@@ -89,3 +92,12 @@
     \usebeamerfont{page number in head/foot}%
     \insertframenumber\,/\,\inserttotalframenumber\kern1em%
 }
+
+
+\usepackage{multicol}
+% Erweiterte Tabellenfunktionen
+\usepackage{tabularx,ragged2e}
+\usepackage{tikz}
+\usetikzlibrary{mindmap,backgrounds}
+
+\newcommand{\quoted}[1]{›#1‹}
