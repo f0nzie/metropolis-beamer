@@ -47,12 +47,12 @@
 \setbeamercolor{date}{fg=white,bg=OilGainsGreen}
 \setbeamercolor{institute}{fg=yellow,bg=OilGainsGreen}
 
-% change color of the progress bar
+% change color of the progress bar and title separator
 \definecolor{blueucl}{RGB}{0,87,156} %which is the color of my university
 \setbeamercolor{progress bar}{fg=blueucl}
 \setbeamercolor{title separator}{fg=lightgray} % color of the title separator
 \setbeamercolor{progress bar in head/foot}{fg=blueucl}
-\setbeamercolor{progress bar in section page}{fg=blueucl}
+\setbeamercolor{progress bar in section page}{fg=OilGainsGreen}
 
 
 % change color standout slide
@@ -61,3 +61,17 @@
 \definecolor{myGold}{RGB}{226,168,43}
 % keep colors white and OilGainsGreen
 \setbeamercolor{palette primary}{fg=white, bg=OilGainsGreen}
+
+% change TOC color
+% https://tex.stackexchange.com/a/29332/173708
+\colorlet{mycolor}{orange!80!black}% change this color to suit your needs
+\setbeamercolor{section in toc}{fg=mycolor}
+\setbeamercolor{subsection in toc shaded}{fg=black}
+
+% change thickness of progress bar and title separator
+% https://github.com/matze/mtheme/issues/237
+\makeatletter
+\setlength{\metropolis@titleseparator@linewidth}{0.25pt}
+\setlength{\metropolis@progressonsectionpage@linewidth}{2pt}
+\setlength{\metropolis@progressinheadfoot@linewidth}{2pt}
+\makeatother
