@@ -17,7 +17,12 @@ biblio-style: abbrvnat
 ---
 
 ## Table of Contents
-\tableofcontents
+
+\frametitle{Outline}
+  \begin{minipage}{\textwidth}
+    \tableofcontents
+  \end{minipage}
+
   
 # Introduction
 
