@@ -10,7 +10,7 @@ output:
     includes:
       in_header: header.tex
 bibliography: demo.bib
-biblio-style: abbrvnat
+biblio-style: abbrv
 toc: true
 ---
 
@@ -389,6 +389,7 @@ A simple `knitr::kable` example:
 knitr::kable(mtcars[1:5, 1:8],
              caption="(Parts of) the mtcars dataset")
 ```
+
 
 
 
