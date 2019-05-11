@@ -9,7 +9,7 @@ output:
     citation_package: natbib
     highlight: kate
     includes:
-      in_header: headerOG.tex
+      in_header: header.tex
 bibliography: demo.bib
 biblio-style: abbrvnat
 # urlcolor: blue  
