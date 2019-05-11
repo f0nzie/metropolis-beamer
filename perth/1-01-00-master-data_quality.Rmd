@@ -1,0 +1,36 @@
+---
+title: "Data Quality"
+author: "Alfonso R. Reyes"
+date: "April 2019"
+fontsize: 14pt
+output:
+  beamer_presentation: 
+    fig_height: 3.5
+    fig_width: 7
+    highlight: tango
+    includes:
+      in_header: headerOG.tex
+    theme: metropolis
+---
+
+
+
+```{r data-quality, child="1-01-DQ-importance_of_data_quality.Rmd"}
+
+```
+
+
+```{r missing_data, child="1-01-MD-missing_data.Rmd"}
+
+```
+
+
+```{r tidy_data, child="1-01-TD-tidy_data.Rmd"}
+
+```
+
+
+```{r outliers, child="1-01-DO-detecting_outliers.Rmd"}
+
+```
+

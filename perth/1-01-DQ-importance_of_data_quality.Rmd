@@ -1,0 +1,47 @@
+---
+title: |
+  | \fontsize{20}{20}\sf Data Quality:
+  | \fontsize{24}{24}\sf \color{yellow} Importance
+author: "Alfonso R. Reyes"
+date: "April 2019"
+fontsize: 14pt
+output:
+  beamer_presentation:
+    fig_width: 7
+    fig_height: 3.5
+    highlight: tango
+    includes:
+      in_header: headerOG.tex
+---
+
+```{r setup-DQ, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      warning=FALSE, 
+                      message=FALSE,
+                      comment = "#>"
+                      )
+options(digits=4)
+```
+
+
+# Importance of Data Quality
+
+## Importance of Data Quality
+\fullwidth{quality-large}
+\vspace{1.2cm}
+\textcolor{orange}
+{\fontsize{10}{10}{\emph{\href{https://andrewsheppard.net/research/quality-citizen-science/}{Source:  Quality is a Verb by S. Andrew Sheppard, Loren Terveen}}}}
+
+
+
+## Impact of not checking well input
+* Misleading results
+* Poor input, poor output
+* Models will not converge
+* Work has to be redone
+* Will be unable not close the cycle
+    * \textit{cannot improve what we don't know}
+* Lack of trust
+    * \emph{models get known to be unreliable}
+
+

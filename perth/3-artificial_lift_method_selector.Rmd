@@ -1,0 +1,113 @@
+---
+title: Artificial Lift method selector
+author: "Alfonso R. Reyes"
+date: "April 2019"
+fontsize: 14pt
+output:
+  beamer_presentation:
+    fig_width: 7
+    fig_height: 3.5
+    highlight: tango
+    theme: metropolis
+    includes:
+      in_header: headerOG.tex
+---
+
+
+```{r setup-DO, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      warning=FALSE, 
+                      message=FALSE,
+                      comment = "#>"
+                      )
+options(digits=4)
+```
+
+
+# An Artificial Lift method selector
+
+## Application
+\fullwidth{al_selection_tool}
+
+## Concept and workflow
+- A visual tool to select an AL method
+- Rapid application development
+- Shareable
+- Made with R and Shiny
+- It is not comprenhensive but gives an idea
+- Ideal to store data from literature
+- New criteria can be added
+
+
+## Selection criteria
+- It is based on a matrix of AL methods vs rankings
+- The matrix lives in a worksheet easy to modify
+- These rankings could be subjective
+- The selection criteria may have many values
+- The criteria and value are plotted and compared
+- The higher the ranking \textbf{(3)}, the better the AL choice
+
+
+## Selection boxes
+\begin{textblock}{4.5}(1.1, 6.0)\fontsize{10}{10}\sf
+\begin{block}{\centering{Design Aspect}\par}
+\parskip=0.150cm
+\fontsize{14}{14}
+The Design Aspect could be production rate, well inclination, watercut, sand, operating cost, etc. 
+\end{block}
+\end{textblock}  
+
+\begin{textblock}{4.5}(7.2, 6.0)\fontsize{10}{10}\sf
+\begin{block}{\centering{Value}\par}
+\fontsize{14}{14}
+The value corresponds to a single number, a condition or a range.
+\end{block}
+\end{textblock}
+
+\placefig{1.0}{1.5}{width=5cm}{al_selection_tool-design_aspect}
+\placefig{7.2}{1.5}{width=4.75cm, height=2.5cm}{al_selection_tool-value_design_aspect}
+
+
+## Evaluation variables
+\fontsize{10}{10}\sf
+\begin{columns}[T,onlytextwidth]
+
+  \column{0.3\textwidth}
+    \setlength{\parindent}{2em}
+    \textbf{Design Aspect}
+    \begin{itemize}
+      \item Characteristic 
+      \item Feature to compare
+      \item Ex: temperature, sand, watercut, cost.
+    \end{itemize}
+
+  \column{0.3\textwidth}
+    \setlength{\parindent}{2em}
+    \textbf{Relevance}
+    \begin{description}
+      \item[High] Widely used
+      \item[Low] Less used
+      \item [Specialty] Niche areas
+    \end{description}
+
+  \column{0.4\textwidth}
+    \setlength{\parindent}{5em}
+    \textbf{Ranking}
+    \begin{description}
+      \item[1] Low performance
+      \item[2] Average
+      \item[3] High performance
+    \end{description}
+    
+\end{columns}
+
+
+
+## Selection matrix as raw data
+\fullwidth{al_matrix}
+
+## Selection matrix as tidy data
+\fullheight{al_matrix_tidy}
+
+
+

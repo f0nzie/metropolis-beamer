@@ -1,0 +1,52 @@
+---
+title: "Tidy Data"
+author: "Alfonso R. Reyes"
+date: "April 2019"
+fontsize: 14pt
+output:
+  beamer_presentation:
+    fig_width: 7
+    fig_height: 3.5
+    highlight: tango
+    theme: metropolis
+    includes:
+      in_header: headerOG.tex
+---
+
+
+```{r setup-TD, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      warning=FALSE, 
+                      message=FALSE,
+                      comment = "#>"
+                      )
+options(digits=4)
+```
+
+# Tidy data
+
+## Standing-Katz chart
+\fullwidth{standing-katz-plot}
+
+## What is not tidy data
+\fullwidth{zfactor_rawdata}
+
+## After tidying it up
+\fullwidth{zfactor_tidy}
+
+
+## Why is so hard to operate with untidy data
+
+* Difficult to vectorize
+* Extra steps to perform arithmetic operations
+* Difficult to plot: series, facets
+* Plotting doesn't scale very well
+
+\vspace{1.2cm}
+
+\begin{alertblock}{}
+Maybe comfortable for the human eyes ... \newline
+... but less effective for computers.
+\end{alertblock}  
+
+

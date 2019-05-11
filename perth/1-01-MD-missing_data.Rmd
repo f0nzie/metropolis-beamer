@@ -1,0 +1,168 @@
+---
+title: | 
+  | \fontsize{24}{24}\sf \color{yellow} Missing Data
+  | \fontsize{20}{20}\sf Data Quality:
+author: "Alfonso R. Reyes"
+date: "April 2019"
+fontsize: 14pt
+output:
+  beamer_presentation: 
+    fig_height: 3.5
+    fig_width: 7
+    highlight: kate
+    includes:
+      in_header: headerOG.tex
+    theme: AnnArbor
+---
+
+
+```{r setup-MD, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      warning = FALSE, 
+                      message = FALSE,
+                      comment = "#>",
+                      cache = TRUE
+                      )
+options(digits=4)
+```
+
+# Finding and filling missing data
+
+## Example of filling missing data
+
+\begin{textblock}{4.5}(4.5, 4.5)\textcolor{black}{\fontsize{28}{28}{\textbf{Well Tests}}}\end{textblock} 
+
+
+```{r echo=FALSE}
+# tibble allows to compress the output of a dataset when printing
+library(dplyr)
+library(tibble)
+library(skimr)
+
+dataset <- read.csv("./inst/rawdata/2007_welltest.csv", stringsAsFactors = FALSE)
+dataset <- as_tibble(dataset)   # small output
+```
+
+
+```{r echo=FALSE}
+# show all the columns 
+# names(dataset)
+```
+
+## Well test data: numeric variables
+\fontsize{7}{7}\sf
+```{r}
+# get only the numeric columns
+nums <- sapply(dataset, is.numeric)
+numdf <- dataset[, nums]
+names(numdf)
+```
+
+```{r echo=FALSE}
+# numdf
+```
+
+
+```{r echo=FALSE}
+sel_numdf <- 
+numdf %>% 
+  select(DURATION_HRS, WH_USC_PRESS_PSIG, ANNULUS_PRESS_PSIG, WH_USC_TEMP_F, 
+         GL_RATE_SM3PERDAY, NET_OIL_RATE_ADJ_SM3PERDAY, GOR_SCFPERBBL, 
+         WATERCUT_PCT)
+    # as.data.frame(sapply(as.numeric)) %>% 
+```
+
+```{r echo=FALSE}
+# get only the non-numeric columns
+nums <- sapply(dataset, is.numeric)
+nonumdf <- dataset[, !nums]
+names(nonumdf)
+```
+
+
+
+```{r echo=FALSE}
+# show only the ID descriptive variables
+library(dplyr)
+
+id_descr <- 
+dataset %>%
+    select(CODE, WELL_HOLE_CODE, OP_SUB_AREA_CODE, OP_AREA_CODE, OP_FCTY_1_CODE)
+```
+
+```{r echo=FALSE}
+# bind the columns from the non-numeric and numeric dataframes
+df <- cbind(id_descr$CODE, id_descr$WELL_HOLE_CODE, sel_numdf)
+```
+
+
+## Look for missing values
+
+\begin{alertblock}{}
+In this case we are using the statistical package \textbf{mice} to fill in for the missing values.
+\end{alertblock}  
+
+\vspace{1.2cm}
+
+
+\fontsize{10}{10}\sf
+
+```{r echo=TRUE}
+library(tidyverse)
+library(mice)
+library(lattice)
+```
+
+```{r echo=TRUE, eval=FALSE}
+# plot the missing data in a matrix by variables
+md_pattern <- md.pattern(df, rotate.names = TRUE)
+```
+
+
+## Look for missing values
+
+
+\fontsize{10}{10}\sf
+
+```{r fig.height=13, fig.width=15}
+# plot the missing data in a matrix by variables
+md_pattern <- md.pattern(df, rotate.names = TRUE)
+```
+
+
+## Missing values per variable
+\fontsize{7}{7}\sf
+
+```{r echo=TRUE}
+# number of complete cases: no variable value is missing in that observation
+sum(complete.cases(sel_numdf))
+```
+
+\vspace{1.2cm}
+
+```{r echo=TRUE}
+sel_numdf %>% 
+    skim_to_list() %>% 
+    .[["numeric"]] %>% 
+    as.data.frame(sapply(as.numeric)) %>% 
+    dplyr::select(variable, missing, complete)
+```
+
+
+```{r imputting_data, echo=FALSE, cache=TRUE}
+# create mice object dataset_impute
+df_impute <- mice(data = df[, -c(1,2)],  print = FALSE, m = 1)
+```
+
+
+## How well the fill data fits in
+
+```{r}
+# magenta is the imputted values
+stripplot(df_impute, pch = 20, cex = 1.2, 
+          par.strip.text=list(cex=0.55))
+```
+
+
+
+
